@@ -1,0 +1,21 @@
+{% extends 'customers/base.html' %}
+
+{% block title %}AWN Customer App Project{% endblock %}
+
+{% block heading %}Customer List{% endblock %}
+
+{% block navigation %}<li style="list-style: none;"><a href="{% url 'add_customer' %}">Add Customer</a></li>{% endblock %}
+
+{% block content %}
+<ul>
+    {% for obj in customers %}
+            <li style="list-style: none; padding-bottom: 1em;">
+                {{ obj.first_name }} {{ obj.last_name }} {{ obj.address }} {{ obj.city }} {{ obj.state }} {{ obj.zip_code}}
+                <form style="display: inline;" method="post" action="{% url 'delete_customer' obj.pk %}">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+    {% endfor %}
+</ul>
+{% endblock %}

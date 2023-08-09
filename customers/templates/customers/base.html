@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AWN Customer Project{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block heading %}AWN Customer Project{% endblock %}</h1>
+    </header>
+    <nav name="navigation">
+        <ul name="navigation_ul" style="float: right;">
+        {% block navigation %}{% endblock %}
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {{ year }} AWN</p>
+    </footer>
+</body>
+</html>
