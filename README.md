@@ -13,7 +13,7 @@ Poetry is used to manage dependencies
 5. ~~Add Customer model~~
 6. ~~Add address model???~~ Answer: not needed
 7. ~~Add add form~~
-8. Add delete form and button to index
+8. ~~Add delete form and button to index~~
 9. Add unit tests
    1. Check all fields are required
 10. Coding style for Django models
